@@ -59,11 +59,7 @@ Rather than sending the raw multiplexed signal straight to the output connector,
 
 ---
 
-## PCB Layout
 
-![PCB 2D Layout](pcb_2d_layout.png)
-
----
 
 ## Author
 
