@@ -50,10 +50,12 @@ Rather than sending the raw multiplexed signal straight to the output connector,
 
 | File | Description |
 |---|---|
-| `schematic.png` | Full circuit schematic |
+| `schematic.pdf` | Full circuit schematic |
 | `pcb_2d_layout.png` | Routed 2-layer PCB layout (top + bottom copper) |
 | `pcb_3d_render.png` | 3D rendered view of the assembled board |
+| `pcb_2d_render.png` | 2D rendered view of the assembled board |
 | `gerber_files.zip` | Fabrication-ready Gerber files |
+| `interactive_bom.html` | Interactive Bill of Materials with clickable 3D board view |
 
 ---
 
