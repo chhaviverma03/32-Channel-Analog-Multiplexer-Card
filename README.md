@@ -13,7 +13,7 @@ Automated test setups often need to route one of many analog signals to a single
 ## How It Works
 
 - A 5-bit address (`A0`–`A4`) selects 1 of 32 channels.
-- A **74LS138** decoder uses part of the address to enable exactly one of four **ADG528F** analog switch ICs at a time, via active-low enable lines — ensuring only one switch is ever driving the shared output.
+- A **74HC238** decoder uses part of the address to enable exactly one of four **ADG528F** analog switch ICs at a time, via active-HIGH enable lines — ensuring only one switch is ever driving the shared output.
 - The remaining address bits go directly into each ADG528F's own channel-select pins, so once a chip is enabled, it picks the correct one of its 8 channels internally.
 - All four ADG528F outputs are tied to a common analog bus, safe specifically because only one chip is enabled at any time.
 - A **TL071** op-amp, wired as a unity-gain buffer, cleans up the signal before it reaches the output connector — removing any loading error introduced by the switch's internal resistance.
@@ -23,7 +23,7 @@ Automated test setups often need to route one of many analog signals to a single
 ## Key Design Decisions
 
 **Decoder-to-switch enable mapping**
-The 74LS138's four active outputs (Y0–Y3) are wired directly to each ADG528F's active-low EN pin, so exactly one of the four 8-channel switches is live at any given address — avoiding any possibility of two switches driving the output bus simultaneously.
+The 74HC238's four active outputs (Y0–Y3) are wired directly to each ADG528F's active-HIGH EN pin, so exactly one of the four 8-channel switches is live at any given address — avoiding any possibility of two switches driving the output bus simultaneously.
 
 **Decoupling throughout**
 Every IC's power pins are decoupled with dedicated capacitors branching off the supply rail rather than sitting inline, to avoid interrupting the ±15V/+5V supply paths while still filtering switching noise close to each chip.
@@ -40,7 +40,7 @@ Rather than sending the raw multiplexed signal straight to the output connector,
 | Channels | 32 (00H–1FH) |
 | Analog signal range | ±15V |
 | Address bus | 5-bit (A0–A4) |
-| Key ICs | 4× ADG528F (analog switch), 74LS138 (decoder), TL071 (buffer) |
+| Key ICs | 4× ADG528F (analog switch), 74HC238 (decoder), TL071 (buffer) |
 | PCB | 2-layer, routed in EasyEDA |
 | Design tool | EasyEDA (schematic capture + PCB layout) |
 
@@ -50,7 +50,7 @@ Rather than sending the raw multiplexed signal straight to the output connector,
 
 | File | Description |
 |---|---|
-| `schematic.pdf` | Full circuit schematic |
+| `32x1_SCHEMATIC.pdf` | Full circuit schematic |
 | `pcb_2d_layout.png` | Routed 2-layer PCB layout (top + bottom copper) |
 | `pcb_3d_render.png` | 3D rendered view of the assembled board |
 | `pcb_2d_render.png` | 2D rendered view of the assembled board |
