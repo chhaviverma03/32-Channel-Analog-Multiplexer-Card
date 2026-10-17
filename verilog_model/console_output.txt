@@ -1,1 +1,98 @@
-
+Time resolution is 1 ps
+source tb_32x1mux.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+DECODER ACTIVATED
+MUX[1] ACTIVATED
+NO ENABLE SIGNAL RECIVED FOR MUX[2] FROM DECODER | MUX[2] DEACTIVATED
+NO ENABLE SIGNAL RECIVED FOR MUX[3] FROM DECODER | MUX[3] DEACTIVATED
+NO ENABLE SIGNAL RECIVED FOR MUX[4] FROM DECODER | MUX[4] DEACTIVATED
+Time=20000 | Address=00000 | selected_channel=channel_in[0] | Input channel=1 | Output=1
+PASS: Channel 0 selected correctly.
+Time=30000 | Address=00001 | selected_channel=channel_in[1] | Input channel=1 | Output=1
+PASS: Channel 1 selected correctly.
+Time=40000 | Address=00010 | selected_channel=channel_in[2] | Input channel=1 | Output=1
+PASS: Channel 2 selected correctly.
+Time=50000 | Address=00011 | selected_channel=channel_in[3] | Input channel=1 | Output=1
+PASS: Channel 3 selected correctly.
+Time=60000 | Address=00100 | selected_channel=channel_in[4] | Input channel=1 | Output=1
+PASS: Channel 4 selected correctly.
+Time=70000 | Address=00101 | selected_channel=channel_in[5] | Input channel=1 | Output=1
+PASS: Channel 5 selected correctly.
+Time=80000 | Address=00110 | selected_channel=channel_in[6] | Input channel=1 | Output=1
+PASS: Channel 6 selected correctly.
+Time=90000 | Address=00111 | selected_channel=channel_in[7] | Input channel=1 | Output=1
+PASS: Channel 7 selected correctly.
+NO ENABLE SIGNAL RECIVED FOR MUX[1] FROM DECODER | MUX[1] DEACTIVATED
+MUX[2] ACTIVATED
+Time=100000 | Address=01000 | selected_channel=channel_in[8] | Input channel=1 | Output=1
+PASS: Channel 8 selected correctly.
+Time=110000 | Address=01001 | selected_channel=channel_in[9] | Input channel=1 | Output=1
+PASS: Channel 9 selected correctly.
+Time=120000 | Address=01010 | selected_channel=channel_in[10] | Input channel=1 | Output=1
+PASS: Channel 10 selected correctly.
+Time=130000 | Address=01011 | selected_channel=channel_in[11] | Input channel=1 | Output=1
+PASS: Channel 11 selected correctly.
+Time=140000 | Address=01100 | selected_channel=channel_in[12] | Input channel=1 | Output=1
+PASS: Channel 12 selected correctly.
+Time=150000 | Address=01101 | selected_channel=channel_in[13] | Input channel=1 | Output=1
+PASS: Channel 13 selected correctly.
+Time=160000 | Address=01110 | selected_channel=channel_in[14] | Input channel=1 | Output=1
+PASS: Channel 14 selected correctly.
+Time=170000 | Address=01111 | selected_channel=channel_in[15] | Input channel=1 | Output=1
+PASS: Channel 15 selected correctly.
+NO ENABLE SIGNAL RECIVED FOR MUX[2] FROM DECODER | MUX[2] DEACTIVATED
+MUX[3] ACTIVATED
+Time=180000 | Address=10000 | selected_channel=channel_in[16] | Input channel=1 | Output=1
+PASS: Channel 16 selected correctly.
+Time=190000 | Address=10001 | selected_channel=channel_in[17] | Input channel=1 | Output=1
+PASS: Channel 17 selected correctly.
+Time=200000 | Address=10010 | selected_channel=channel_in[18] | Input channel=1 | Output=1
+PASS: Channel 18 selected correctly.
+Time=210000 | Address=10011 | selected_channel=channel_in[19] | Input channel=1 | Output=1
+PASS: Channel 19 selected correctly.
+Time=220000 | Address=10100 | selected_channel=channel_in[20] | Input channel=1 | Output=1
+PASS: Channel 20 selected correctly.
+Time=230000 | Address=10101 | selected_channel=channel_in[21] | Input channel=1 | Output=1
+PASS: Channel 21 selected correctly.
+Time=240000 | Address=10110 | selected_channel=channel_in[22] | Input channel=1 | Output=1
+PASS: Channel 22 selected correctly.
+Time=250000 | Address=10111 | selected_channel=channel_in[23] | Input channel=1 | Output=1
+PASS: Channel 23 selected correctly.
+NO ENABLE SIGNAL RECIVED FOR MUX[3] FROM DECODER | MUX[3] DEACTIVATED
+MUX[4] ACTIVATED
+Time=260000 | Address=11000 | selected_channel=channel_in[24] | Input channel=1 | Output=1
+PASS: Channel 24 selected correctly.
+Time=270000 | Address=11001 | selected_channel=channel_in[25] | Input channel=1 | Output=1
+PASS: Channel 25 selected correctly.
+Time=280000 | Address=11010 | selected_channel=channel_in[26] | Input channel=1 | Output=1
+PASS: Channel 26 selected correctly.
+Time=290000 | Address=11011 | selected_channel=channel_in[27] | Input channel=1 | Output=1
+PASS: Channel 27 selected correctly.
+Time=300000 | Address=11100 | selected_channel=channel_in[28] | Input channel=1 | Output=1
+PASS: Channel 28 selected correctly.
+Time=310000 | Address=11101 | selected_channel=channel_in[29] | Input channel=1 | Output=1
+PASS: Channel 29 selected correctly.
+Time=320000 | Address=11110 | selected_channel=channel_in[30] | Input channel=1 | Output=1
+PASS: Channel 30 selected correctly.
+Time=330000 | Address=11111 | selected_channel=channel_in[31] | Input channel=1 | Output=1
+PASS: Channel 31 selected correctly.
+MUX[1] ACTIVATED
+NO ENABLE SIGNAL RECIVED FOR MUX[4] FROM DECODER | MUX[4] DEACTIVATED
+All inputs zero | Output=0
+DECODER DEACTIVATED
+NO ENABLE SIGNAL RECIVED FOR MUX[1] FROM DECODER | MUX[1] DEACTIVATED
+Decoder disabled | Output=z
+$finish called at time : 350 ns : File "C:/verilog/ANALOG_MUX_CARD_32X1/ANALOG_MUX_CARD_32X1.srcs/sim_1/new/tb_32x1mux.v" Line 138
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3365.770 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_32x1mux_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 3365.770 ; gain = 0.000
